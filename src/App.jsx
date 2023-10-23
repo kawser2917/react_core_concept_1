@@ -3,12 +3,19 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import Todo from './Todo'
+import Actor from './Actor'
 
 function App() {
+  const actors = ['Shakib','Manna','Mehedi','Kung Fu Master Rubel','Tom Crush']
   return (
     <>
       <h1>Vite + React</h1>
-      <Device name="laptop" price= "3000"></Device>
+      {
+        actors.map(actor=> <Actor actor={actor}></Actor>)
+      }
+
+
+      {/* <Device name="laptop" price= "3000"></Device>
       <Device name="Mobile" price= "1000"></Device>
       <Device name="Camera" price= "3000"></Device>
       <Person></Person>
@@ -18,7 +25,7 @@ function App() {
       <Developer></Developer>
       <Todo task="Learn React" isDone={false}></Todo>
       <Todo task="Learn Component" isDone={false}></Todo>
-      <Todo task="Learn Jsx" isDone={true}></Todo>
+      <Todo task="Learn Jsx" isDone={true}></Todo> */}
     </>
   )
 }
