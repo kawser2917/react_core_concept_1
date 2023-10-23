@@ -4,14 +4,25 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Todo from './Todo'
 import Actor from './Actor'
+import Singer from './singers'
 
 function App() {
   const actors = ['Shakib','Manna','Mehedi','Kung Fu Master Rubel','Tom Crush']
+  const singers = [
+    {name:"A.R Rahman", age:58},
+    {name:"Arigit sing", age:40},
+    {name:"Pitbull", age:51},
+    {name:"Sakira", age:15},
+    {name:"Nora Fatehi", age:18},
+  ]
   return (
     <>
       <h1>Vite + React</h1>
       {
         actors.map(actor=> <Actor actor={actor}></Actor>)
+      }
+      {
+        singers.map(singer=><Singer singer={singer}></Singer>)
       }
 
 
